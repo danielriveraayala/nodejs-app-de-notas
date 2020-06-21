@@ -5,7 +5,7 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const flash = require('connect-flash');
 const passport = require('passport');
-
+//npm i -D handlebars@4.5.0
 // Initializations
 const app = express();
 require('./config/passport');
