@@ -1,0 +1,6 @@
+
+#IntelliJ IDEAPhpStormWebStorm
+.idea
+node_modules
+package-lock.json
+.env
