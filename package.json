@@ -1,6 +1,6 @@
 {
   "name": "nodejs-app-de-notas",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "Practica para Maestría en UNIR",
   "main": "index.js",
   "scripts": {
