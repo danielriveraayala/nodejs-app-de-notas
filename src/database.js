@@ -2,7 +2,8 @@ const mongoose = require("mongoose");
 
 const { NOTES_APP_MONGODB_HOST, NOTES_APP_MONGODB_DATABASE } = process.env;
 
-const MONGODB_URI = `mongodb://localhost/note_app`;
+//const MONGODB_URI = `mongodb://localhost/note_app`;
+const MONGODB_URI = 'mongodb+srv://notas_app:zdPino8UwE4FPqPZ@cluster0-qknyu.mongodb.net/notas_app?retryWrites=true&w=majority';
 //zdPino8UwE4FPqPZ
 //notas_app
 mongoose
