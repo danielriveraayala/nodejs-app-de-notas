@@ -31,10 +31,9 @@ notesCtrl.createNewNote = async (req, res) => {
 };
 
 notesCtrl.renderNotes = async (req, res) => {
-    const gravatar = md5(req.user.email);
     const notes = await Note.find({user: req.user.id}).sort({date: "desc"});
     const user = req.user;
-    res.render("notes/all-notes", {notes, gravatar, user});
+    res.render("notes/all-notes", {notes});
 };
 
 notesCtrl.renderNotesApiRest = async (req, res) => {
