@@ -6,6 +6,7 @@ const {
   renderNoteForm,
   createNewNote,
   renderNotes,
+  renderNotesApiRest,
   renderEditForm,
   updateNote,
   deleteNote
@@ -20,7 +21,9 @@ router.get("/notes/add", isAuthenticated, renderNoteForm);
 router.post("/notes/new-note", isAuthenticated, createNewNote);
 
 // Get All Notes
+
 router.get("/notes", isAuthenticated, renderNotes);
+router.get("/notes/api/rest/", isAuthenticated, renderNotesApiRest);
 
 // Edit Notes
 router.get("/notes/edit/:id", isAuthenticated, renderEditForm);
