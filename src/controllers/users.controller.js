@@ -1,5 +1,5 @@
 const usersCtrl = {};
-
+const md5 = require('md5');
 // Models
 const User = require('../models/User');
 
@@ -13,7 +13,7 @@ usersCtrl.renderSignUpForm = (req, res) => {
 usersCtrl.singup = async (req, res) => {
   let errors = [];
   const { name, email, password, confirm_password } = req.body;
-  if (password != confirm_password) {
+  if (password !== confirm_password) {
     errors.push({ text: "Las contraseñas no coinciden" });
   }
   if (password.length < 4) {

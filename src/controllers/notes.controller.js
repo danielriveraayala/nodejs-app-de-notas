@@ -1,5 +1,5 @@
 const notesCtrl = {};
-
+const md5 = require('md5');
 // Models
 const Note = require("../models/Note");
 
@@ -32,8 +32,10 @@ notesCtrl.createNewNote = async (req, res) => {
 };
 
 notesCtrl.renderNotes = async (req, res) => {
+    const gravatar = md5(req.user.email);
     const notes = await Note.find({user: req.user.id}).sort({date: "desc"});
-    res.render("notes/all-notes", {notes});
+    const user = req.user;
+    res.render("notes/all-notes", {notes, gravatar, user});
 };
 
 notesCtrl.renderNotesApiRest = async (req, res) => {
