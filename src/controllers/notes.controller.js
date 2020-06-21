@@ -1,5 +1,4 @@
 const notesCtrl = {};
-const md5 = require('md5');
 // Models
 const Note = require("../models/Note");
 
