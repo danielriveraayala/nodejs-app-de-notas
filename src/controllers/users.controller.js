@@ -1,5 +1,4 @@
 const usersCtrl = {};
-const md5 = require('md5');
 // Models
 const User = require('../models/User');
 
