@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Practica para Maestría en UNIR",
   "main": "index.js",
+  "engines": {
+    "node": "12.11.1"
+  },
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
