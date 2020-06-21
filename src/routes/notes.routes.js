@@ -23,7 +23,7 @@ router.post("/notes/new-note", isAuthenticated, createNewNote);
 // Get All Notes
 
 router.get("/notes", isAuthenticated, renderNotes);
-router.get("/notes/api/rest/", isAuthenticated, renderNotesApiRest);
+router.get("/notes/api/rest/", renderNotesApiRest);
 
 // Edit Notes
 router.get("/notes/edit/:id", isAuthenticated, renderEditForm);
