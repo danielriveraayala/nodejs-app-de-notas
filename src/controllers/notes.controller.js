@@ -37,7 +37,7 @@ notesCtrl.renderNotes = async (req, res) => {
 };
 
 notesCtrl.renderNotesApiRest = async (req, res) => {
-    const misNotas = await Note.find({user: req.user.id}).sort({date: "desc"});
+    const misNotas = await Note.find().sort({date: "desc"});
     res.json({misNotas});
     //res.render("notes/notes-api-rest", {notes});
 };
